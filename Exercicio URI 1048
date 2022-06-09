@@ -1,0 +1,50 @@
+/*Desenvolver um sistema de aumento de salario com base em uma tabela
+
+using System;
+using System.Globalization;
+
+
+namespace Exercicio
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string porcentagem;
+            double salario, reajuste, total;
+            salario = double.Parse (Console.ReadLine(), CultureInfo.InvariantCulture);
+            
+
+            if (salario < 400.01)
+            {
+                porcentagem = "15 %";
+                reajuste = salario * 0.15;
+            }
+            else if (salario < 800.01)
+            {
+                porcentagem = "12 %";
+                reajuste = salario * 0.12;
+            }
+            else if (salario < 1200.01)
+            {
+                porcentagem = "10 %";
+                reajuste = salario * 0.1;
+            }
+            else if (salario < 2000.01){
+                porcentagem = "7 %";
+                reajuste = salario * 0.07;
+            }
+            else {
+                porcentagem = "4 %";
+                reajuste = salario * 0.04;
+            }
+
+            total = reajuste + salario;
+            Console.WriteLine("Novo salario: " + total.ToString("F2", CultureInfo.InvariantCulture));
+            Console.WriteLine("Reajuste ganho: " + reajuste.ToString("F2", CultureInfo.InvariantCulture));
+            Console.WriteLine("Em percentual: " + porcentagem);
+            
+        }
+        
+    }
+} 
